@@ -109,13 +109,6 @@ button {
   margin-bottom: 2em;
 }
 #result {
-  font-size: 5em;
-  color: yellow;
-  text-transform: uppercase;
-  font-style: italic;
-}
-
-.wow {
   background-color: #F05A0F;
   border: 1px solid white;
   padding: 1em;
