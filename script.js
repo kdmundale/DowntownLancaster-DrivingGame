@@ -66,17 +66,17 @@ function movePotholes() {
             deathScreen.classList.remove("hide");
             mileadge.style.display= "none";
             let result = document.getElementById("result");
-                if (miles <= 1) {
+                if ((miles <= 1)) {
                   result.innerText = 'That was pathetic. Really??\n' + miles + ' mile';
                 }
-                else if (1 < miles < 30) {
+                else if ((1 < miles < 20)) {
                   result.innerText = 'Wow, you suck. You only made it\n' +
                   miles + ' miles';
                 }
-                else if (60 > miles >= 30) {
+                else if ((20 <= miles < 60)) {
                   result.innerText = 'Ok. Not terrible.\nBut you\'re still not driving me anywhere.\n' + miles + ' miles';
                 }
-                else if (miles >= 60) {
+                else {
                   result.innerText = 'Alright now, Tokyo Drift.\n' + miles + ' miles';
                 }
           }
