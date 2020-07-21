@@ -55,7 +55,7 @@ button {
   color: white;
   display: block;
   margin:auto;
-  font-size: calc(50px + 30 * ((100vw - 600px)/1000));
+  font-size: calc(40px + 30 * ((100vw - 600px)/1000));
   border-radius: 30%;
   padding: 1em;
   margin-top: 1em;
@@ -126,7 +126,7 @@ button {
   font-size: 2em;
 }
 .intro {
-  font-size: calc(30px + 30 * ((100vw - 600px)/1000));
+  font-size: calc(20px + 30 * ((100vw - 600px)/1000));
   font-variant: normal;
   font-style: normal;
   text-align: center;
