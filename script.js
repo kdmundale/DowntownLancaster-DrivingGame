@@ -16,6 +16,7 @@ const restart = document.querySelector(".respawn");
 restart.addEventListener("click",reload);
 let position = [10, 15, 20, 30, 45, 50, 55, 60, 70, 80];
 let miles =0;
+
 function reload() {
   window.location.reload();
 }
@@ -136,6 +137,7 @@ if (player.safe == true) {
         }
     car.style.left = player.x + "px";
     car.style.top = player.y + "px";
+
 
     window.requestAnimationFrame(playGame);
   }

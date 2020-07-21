@@ -18,6 +18,9 @@
    height: 100vh;
    width: 100vw;
  }
+
+
+
 h1 {
   text-align: center;
   font-size: calc(70px + 50 * ((100vw - 600px)/1000));
@@ -26,10 +29,22 @@ h1 {
   margin-bottom: 20px;
 }
 
+h1 {
+  transform:  rotate(-10deg);
+  grid-area: text;
+  font-family: 'Sarpanch', sans-serif;
+  font-size: calc(75px + 50 * ((100vw - 600px)/1000));
+  margin: 50px 20px 20px 20px;
+  padding: 30px;
+  color: #050000;
+  text-shadow: 5px 5px 2px #d10000, -5px -5px 2px #ffffff;
+}
+
 p {
   font-variant: small-caps;
   font-style: italic;
-  font-size: calc(25px + 50 * ((100vw - 600px)/1000));
+  margin: 0 40px 20px 40px;
+  font-size: calc(30px + 50 * ((100vw - 600px)/1000));
   text-align: center;
 
 }
