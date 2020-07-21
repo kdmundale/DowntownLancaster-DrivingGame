@@ -23,9 +23,15 @@ h1 {
   font-size: calc(70px + 50 * ((100vw - 600px)/1000));
   font-family: sans-serif;
   font-style: italic;
+  margin-bottom: 20px;
 }
 
 p {
+  font-variant: small-caps;
+  font-style: italic;
+  font-size: calc(25px + 50 * ((100vw - 600px)/1000));
+  text-align: center;
+
 }
 
 
@@ -105,16 +111,20 @@ button {
   font-size: 2em;
 }
 .intro {
-  font-size: calc(35px + 30 * ((100vw - 600px)/1000));
+  font-size: calc(30px + 30 * ((100vw - 600px)/1000));
+  font-variant: normal;
+  font-style: normal;
   text-align: center;
   color: white;
-  background-color: rgba(5, 156, 10, .8);
+  background: linear-gradient(0.15turn, #3700ff, #0066ff, #3700ff);
   width: 75vw;
   border: 1px solid white;
   padding: 20px;
   margin: auto;
 }
 #result {
+  font-variant: normal;
+  font-style: normal;
   margin: 150px 20px 50px 20px;
   background: linear-gradient(#0d00ff,#a200ff,#0d00ff);
   border: 1px solid white;
