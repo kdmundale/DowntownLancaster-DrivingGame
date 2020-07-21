@@ -29,6 +29,7 @@ let keys = {
 
 document.addEventListener("keydown", pressOn);
 document.addEventListener("keyup", pressOff);
+
 function moveLines() {
       let lines = document.querySelectorAll(".line");
       lines.forEach(function (item) {
@@ -66,16 +67,19 @@ function movePotholes() {
             deathScreen.classList.remove("hide");
             mileadge.style.display= "none";
             let result = document.getElementById("result");
-                if ((miles <= 1)) {
+                if (miles <= 1) {
                   result.innerText = 'That was pathetic. Really??\n' + miles + ' mile';
                 }
-                else if ((1 < miles < 20)) {
-                  result.innerText = 'Wow, you suck. You only made it\n' +
+
+                else if (1 < miles && miles < 10) {
+                  result.innerText = 'Wow, you suck.\nYou only made it\n' +
                   miles + ' miles';
                 }
-                else if ((20 <= miles < 60)) {
+
+                else if (10 <= miles && miles < 25) {
                   result.innerText = 'Ok. Not terrible.\nBut you\'re still not driving me anywhere.\n' + miles + ' miles';
                 }
+
                 else {
                   result.innerText = 'Alright now, Tokyo Drift.\n' + miles + ' miles';
                 }
@@ -119,14 +123,15 @@ if (player.safe == true) {
   }
 
   let road = gameArea.getBoundingClientRect();
+  let vehicle = car.getBoundingClientRect();
     if(player.start) {
         if (keys.ArrowUp && player.y > road.top){
           player.y -= player.speed;
-        } else if (keys.ArrowDown && player.y < 800){
+        } else if (keys.ArrowDown && player.y < road.bottom){
           player.y += player.speed;
         } else if (keys.ArrowLeft && player.x > 0) {
             player.x -= player.speed;
-        } else if (keys.ArrowRight && player.x < 565){
+        } else if (keys.ArrowRight && player.x < (road.width - vehicle.width)){
             player.x += player.speed;
         }
     car.style.left = player.x + "px";
