@@ -160,10 +160,10 @@ button {
 #result {
   font-variant: normal;
   font-style: normal;
-  margin: 150px 20px 50px 20px;
+  margin: 80px 20px 50px 20px;
   background: linear-gradient(#0d00ff,#a200ff,#0d00ff);
   border: 1px solid white;
   padding: 20px;
-  font-size: calc(35px + 30 * ((100vw - 600px)/1000));
+  font-size: calc(30px + 30 * ((100vw - 600px)/1000));
   font-family: serif;
 }
