@@ -121,7 +121,7 @@ button {
   position: absolute;
   width:45px;
   left: 275px;
-  height: 87px;
+  height: 80px;
   background-image: url('tree.jpg');
   background-size: contain;
 }
