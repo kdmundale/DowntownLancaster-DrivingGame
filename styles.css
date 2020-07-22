@@ -128,8 +128,8 @@ button {
 
 .mileadge {
   position:absolute;
-  font-size: calc(20px + 30 * ((100vw - 600px)/1000));
-  padding: 15px 120px 15px 120px;
+  font-size: calc(25px + 30 * ((100vw - 600px)/1000));
+  padding: 15px 80px 15px 80px;
   top:0;
   border: 3px solid white;
   background-color: black;
