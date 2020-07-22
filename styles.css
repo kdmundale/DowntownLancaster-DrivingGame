@@ -142,9 +142,7 @@ button {
   text-align: center;
   color: white;
 }
-.respawn {
-  font-size: 2em;
-}
+
 .intro {
   font-size: calc(23px + 30 * ((100vw - 600px)/1000));
   font-variant: normal;
