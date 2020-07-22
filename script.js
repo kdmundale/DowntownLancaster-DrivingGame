@@ -9,6 +9,11 @@ let player = {
   safe: true
 };
 
+let death = ['Really?\nThat was pathetic.\n' ,
+            'Wow, you suck.\n I mean, we weren\'t even going that fast!\nYou only made it\n' ,
+            'Ok. Not terrible.\n You dodged a few potholes, stayed on the road...\nBut you\'re still not driving me anywhere.\n' ,
+            'Alright now, Tokyo Drift.\nI\'d trust you with a lowrider\non Prince Street!\n' ];
+
 const button = document.querySelector(".start");
 button.addEventListener("click",start);
 
@@ -64,26 +69,31 @@ function movePotholes() {
          if (isCollide (car, item)) {
             player.safe = false;
             console.log(player.safe);
+            console.log("pothole collision");
             gameArea.classList.add("hide");
             deathScreen.classList.remove("hide");
             mileadge.style.display= "none";
             let result = document.getElementById("result");
-                if (miles <= 1) {
-                  result.innerText = 'That was pathetic. Really??\n' + miles + ' mile';
-                }
 
-                else if (1 < miles && miles < 10) {
-                  result.innerText = 'Wow, you suck.\nYou only made it\n' +
-                  miles + ' miles';
-                }
+              if (miles < 1) {
+                result.innerText = death[0]+ miles + ' miles';
+              }
 
-                else if (10 <= miles && miles < 25) {
-                  result.innerText = 'Ok. Not terrible.\nBut you\'re still not driving me anywhere.\n' + miles + ' miles';
-                }
+              else if (0 > miles && miles < 2) {
+                result.innerText = death[0]+ miles + ' mile';
+              }
 
-                else {
-                  result.innerText = 'Alright now, Tokyo Drift.\n' + miles + ' miles';
-                }
+              else if (1 < miles && miles < 10) {
+                result.innerText = death[1] + miles + ' miles';
+              }
+
+              else if (10 <= miles && miles < 25) {
+                result.innerText = death[2] + miles + ' miles';
+              }
+
+              else {
+                result.innerText = death[3] + miles + ' miles';
+              }
           }
         });
 }
@@ -110,51 +120,59 @@ function moveTrees() {
          if (isCollide (car, item)) {
             player.safe = false;
             console.log(player.safe);
+            console.log("tree collision");
             gameArea.classList.add("hide");
             deathScreen.classList.remove("hide");
             mileadge.style.display= "none";
             let result = document.getElementById("result");
-                if (miles <= 1) {
-                  result.innerText = 'That was pathetic. Really??\n' + miles + ' mile';
-                }
+              if (miles < 1) {
+                result.innerText = death[0]+ miles + ' miles';
+              }
 
-                else if (1 < miles && miles < 10) {
-                  result.innerText = 'Wow, you suck.\nYou only made it\n' +
-                  miles + ' miles';
-                }
+              else if (0 > miles && miles < 2) {
+                result.innerText = death[0]+ miles + ' mile';
+              }
 
-                else if (10 <= miles && miles < 25) {
-                  result.innerText = 'Ok. Not terrible.\nBut you\'re still not driving me anywhere.\n' + miles + ' miles';
-                }
+              else if (1 < miles && miles < 10) {
+                result.innerText = death[1] + miles + ' miles';
+              }
 
-                else {
-                  result.innerText = 'Alright now, Tokyo Drift.\n' + miles + ' miles';
-                }
+              else if (10 <= miles && miles < 25) {
+                result.innerText = death[2] + miles + ' miles';
+              }
+
+              else {
+                result.innerText = death[3] + miles + ' miles';
+              }
           }
         });
     trees2.forEach(function (item) {
          if (isCollide (car, item)) {
             player.safe = false;
             console.log(player.safe);
+            console.log("tree collision");
             gameArea.classList.add("hide");
             deathScreen.classList.remove("hide");
             mileadge.style.display= "none";
             let result = document.getElementById("result");
-                if (miles <= 1) {
-                  result.innerText = 'That was pathetic. Really??\n' + miles + ' mile';
+                if (miles < 1) {
+                  result.innerText = death[0]+ miles + ' miles';
+                }
+
+                else if (0 > miles && miles < 2) {
+                  result.innerText = death[0]+ miles + ' mile';
                 }
 
                 else if (1 < miles && miles < 10) {
-                  result.innerText = 'Wow, you suck.\nYou only made it\n' +
-                  miles + ' miles';
+                  result.innerText = death[1] + miles + ' miles';
                 }
 
                 else if (10 <= miles && miles < 25) {
-                  result.innerText = 'Ok. Not terrible.\nBut you\'re still not driving me anywhere.\n' + miles + ' miles';
+                  result.innerText = death[2] + miles + ' miles';
                 }
 
                 else {
-                  result.innerText = 'Alright now, Tokyo Drift.\n' + miles + ' miles';
+                  result.innerText = death[3] + miles + ' miles';
                 }
           }
         });
@@ -176,7 +194,7 @@ if (player.safe == true) {
           gameArea.replaceChild(div, old);
           miles++;
           mileadge.textContent = "MILES DRIVEN: "+ miles ;
-          console.log( miles);
+          console.log(miles);
       }
     }
 
@@ -277,7 +295,7 @@ if (player.safe == true) {
     window.requestAnimationFrame(playGame);
   }
 } else if (player.safe == false) {
-  console.log("iufghbjgharfgaskdf");
+  console.log("collision dectected");
 }
 }
 
@@ -331,20 +349,6 @@ function start(){
     div.style.top =10 + "px";
     div.style.left = position[(Math.floor(Math.random()*10))] + "%";
     gameArea.appendChild(div);
-
-    // let tree = document.createElement('div');
-    // tree.classList.add("trees");
-    // tree.y = 10;
-    // tree.style.top= 10 + "px";
-    // tree.style.left= -50 + "px";
-    // gameArea.appendChild(tree);
-    //
-    // let tree2 = document.createElement('div');
-    // tree2.classList.add("trees2");
-    // tree2.y = 10;
-    // tree2.style.top= 10 + "px";
-    // tree2.style.left= 300 + "px";
-    // gameArea.appendChild(tree);
 
     window.requestAnimationFrame(playGame);
     let car = document.createElement("div");
