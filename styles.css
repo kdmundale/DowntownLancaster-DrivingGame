@@ -34,7 +34,7 @@ h1 {
   grid-area: text;
   font-family: 'Sarpanch', sans-serif;
   font-size: calc(75px + 50 * ((100vw - 600px)/1000));
-  margin: 50px 20px 20px 20px;
+  margin: 30px 20px 20px 20px;
   padding: 30px;
   color: #050000;
   text-shadow: 5px 5px 2px #d10000, -5px -5px 2px #ffffff;
@@ -55,7 +55,7 @@ button {
   color: white;
   display: block;
   margin:auto;
-  font-size: calc(40px + 30 * ((100vw - 600px)/1000));
+  font-size: calc(30px + 30 * ((100vw - 600px)/1000));
   border-radius: 30%;
   padding: 1em;
   margin-top: 1em;
@@ -128,8 +128,8 @@ button {
 
 .mileadge {
   position:absolute;
-  font-size: calc(25px + 30 * ((100vw - 600px)/1000));
-  padding: 15px 100px 15px 100px;
+  font-size: calc(20px + 30 * ((100vw - 600px)/1000));
+  padding: 15px 120px 15px 120px;
   top:0;
   border: 3px solid white;
   background-color: black;
@@ -146,7 +146,7 @@ button {
   font-size: 2em;
 }
 .intro {
-  font-size: calc(20px + 30 * ((100vw - 600px)/1000));
+  font-size: calc(23px + 30 * ((100vw - 600px)/1000));
   font-variant: normal;
   font-style: normal;
   text-align: center;
@@ -154,7 +154,7 @@ button {
   background: linear-gradient(0.15turn, #3700ff, #0066ff, #3700ff);
   width: 75vw;
   border: 1px solid white;
-  padding: 20px;
+  padding: 10px;
   margin: auto;
 }
 #result {
