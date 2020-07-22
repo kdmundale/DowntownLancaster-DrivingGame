@@ -79,7 +79,7 @@ function movePotholes() {
                 result.innerText = death[0]+ miles + ' miles';
               }
 
-              else if (0 > miles && miles < 2) {
+              else if (miles == 1) {
                 result.innerText = death[0]+ miles + ' mile';
               }
 
@@ -125,11 +125,12 @@ function moveTrees() {
             deathScreen.classList.remove("hide");
             mileadge.style.display= "none";
             let result = document.getElementById("result");
+
               if (miles < 1) {
                 result.innerText = death[0]+ miles + ' miles';
               }
 
-              else if (0 > miles && miles < 2) {
+              else if (miles == 1) {
                 result.innerText = death[0]+ miles + ' mile';
               }
 
@@ -155,25 +156,26 @@ function moveTrees() {
             deathScreen.classList.remove("hide");
             mileadge.style.display= "none";
             let result = document.getElementById("result");
-                if (miles < 1) {
-                  result.innerText = death[0]+ miles + ' miles';
-                }
 
-                else if (0 > miles && miles < 2) {
-                  result.innerText = death[0]+ miles + ' mile';
-                }
+              if (miles < 1) {
+                result.innerText = death[0]+ miles + ' miles';
+              }
 
-                else if (1 < miles && miles < 10) {
-                  result.innerText = death[1] + miles + ' miles';
-                }
+              else if (miles == 1) {
+                result.innerText = death[0]+ miles + ' mile';
+              }
 
-                else if (10 <= miles && miles < 25) {
-                  result.innerText = death[2] + miles + ' miles';
-                }
+              else if (1 < miles && miles < 10) {
+                result.innerText = death[1] + miles + ' miles';
+              }
 
-                else {
-                  result.innerText = death[3] + miles + ' miles';
-                }
+              else if (10 <= miles && miles < 25) {
+                result.innerText = death[2] + miles + ' miles';
+              }
+
+              else {
+                result.innerText = death[3] + miles + ' miles';
+              }
           }
         });
 }
