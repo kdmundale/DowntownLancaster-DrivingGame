@@ -64,8 +64,8 @@ button {
   position: absolute;
   background-image:url('CAR.png');
   background-size: contain;
-  width: 90px;
-  height: 160px;
+  width: 95px;
+  height: 165px;
   bottom: 10px;
   z-index: 1;
 }
@@ -106,6 +106,26 @@ button {
   border-radius: 50%;
 }
 
+.trees {
+  z-index: 2;
+  position: absolute;
+  left: -50px;
+  width:45px;
+  height: 80px;
+  background-image: url('tree.jpg');
+  background-size: contain;
+}
+
+.trees2 {
+  z-index: 2;
+  position: absolute;
+  width:45px;
+  left: 300px;
+  height: 87px;
+  background-image: url('tree.jpg');
+  background-size: contain;
+}
+
 .mileadge {
   position:absolute;
   font-size: calc(25px + 30 * ((100vw - 600px)/1000));
@@ -115,7 +135,7 @@ button {
   background-color: black;
   color: white;
   text-align: center;
-  z-index: 2;
+  z-index: 3;
 }
 .deathScreen {
   margin: 0;

@@ -88,6 +88,78 @@ function movePotholes() {
         });
 }
 
+function moveTrees() {
+    let trees = document.querySelectorAll(".trees");
+    trees.forEach(function (item) {
+        if (item.y >= window.innerHeight) {
+            item.y -= window.innerHeight;
+        }
+        item.y += player.speed;
+        item.style.top = item.y + "px";
+        });
+    let trees2 = document.querySelectorAll(".trees2");
+    trees2.forEach(function (item) {
+        if (item.y >= window.innerHeight) {
+            item.y -= window.innerHeight;
+        }
+        item.y += player.speed;
+        item.style.top = item.y + "px";
+        });
+    let car = document.querySelector(".car");
+    trees.forEach(function (item) {
+         if (isCollide (car, item)) {
+            player.safe = false;
+            console.log(player.safe);
+            gameArea.classList.add("hide");
+            deathScreen.classList.remove("hide");
+            mileadge.style.display= "none";
+            let result = document.getElementById("result");
+                if (miles <= 1) {
+                  result.innerText = 'That was pathetic. Really??\n' + miles + ' mile';
+                }
+
+                else if (1 < miles && miles < 10) {
+                  result.innerText = 'Wow, you suck.\nYou only made it\n' +
+                  miles + ' miles';
+                }
+
+                else if (10 <= miles && miles < 25) {
+                  result.innerText = 'Ok. Not terrible.\nBut you\'re still not driving me anywhere.\n' + miles + ' miles';
+                }
+
+                else {
+                  result.innerText = 'Alright now, Tokyo Drift.\n' + miles + ' miles';
+                }
+          }
+        });
+    trees2.forEach(function (item) {
+         if (isCollide (car, item)) {
+            player.safe = false;
+            console.log(player.safe);
+            gameArea.classList.add("hide");
+            deathScreen.classList.remove("hide");
+            mileadge.style.display= "none";
+            let result = document.getElementById("result");
+                if (miles <= 1) {
+                  result.innerText = 'That was pathetic. Really??\n' + miles + ' mile';
+                }
+
+                else if (1 < miles && miles < 10) {
+                  result.innerText = 'Wow, you suck.\nYou only made it\n' +
+                  miles + ' miles';
+                }
+
+                else if (10 <= miles && miles < 25) {
+                  result.innerText = 'Ok. Not terrible.\nBut you\'re still not driving me anywhere.\n' + miles + ' miles';
+                }
+
+                else {
+                  result.innerText = 'Alright now, Tokyo Drift.\n' + miles + ' miles';
+                }
+          }
+        });
+}
+
 let goFast = Date.now();
 let go = Date.now();
 
@@ -173,6 +245,7 @@ if (player.safe == true) {
 
   moveLines();
   movePotholes();
+  moveTrees();
   if (player.speed < 25){
     let elapsed = -(goFast-Date.now());
         if (elapsed > player.delay){
@@ -238,12 +311,40 @@ function start(){
         div.style.top = (x*150) + "px";
         gameArea.appendChild(div);
       }
+      for(let x=0; x<10; x++){
+        let div = document.createElement('div');
+        div.classList.add("trees");
+        div.y= x*150;
+        div.style.top = (x*150) + "px";
+        gameArea.appendChild(div);
+      }
+      for(let x=0; x<10; x++){
+        let div = document.createElement('div');
+        div.classList.add("trees2");
+        div.y= x*150;
+        div.style.top = (x*150) + "px";
+        gameArea.appendChild(div);
+      }
     let div = document.createElement('div');
     div.classList.add("potholes");
     div.y= 10;
     div.style.top =10 + "px";
     div.style.left = position[(Math.floor(Math.random()*10))] + "%";
     gameArea.appendChild(div);
+
+    // let tree = document.createElement('div');
+    // tree.classList.add("trees");
+    // tree.y = 10;
+    // tree.style.top= 10 + "px";
+    // tree.style.left= -50 + "px";
+    // gameArea.appendChild(tree);
+    //
+    // let tree2 = document.createElement('div');
+    // tree2.classList.add("trees2");
+    // tree2.y = 10;
+    // tree2.style.top= 10 + "px";
+    // tree2.style.left= 300 + "px";
+    // gameArea.appendChild(tree);
 
     window.requestAnimationFrame(playGame);
     let car = document.createElement("div");
