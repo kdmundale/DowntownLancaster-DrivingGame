@@ -16,27 +16,22 @@
    justify-content: center;
    margin: 0;
    height: 100%;
-   width: 100vw;
+   width: 100%;
  }
 
-
-
-h1 {
-  text-align: center;
-  font-size: calc(70px + 50 * ((100vw - 600px)/1000));
-  font-family: sans-serif;
-  font-style: italic;
-  margin-bottom: 20px;
+.startScreen {
+  width: 90%;
 }
 
 h1 {
   transform:  rotate(-10deg);
   grid-area: text;
-  font-family: 'Sarpanch', sans-serif;
-  font-size: calc(75px + 50 * ((100vw - 600px)/1000));
-  margin: 30px 20px 20px 20px;
-  padding: 30px;
+  font-family: sans-serif;
+  font-size: calc(65px + 50 * ((100vw - 600px)/1000));
+  margin: 30px 20px 20px 10px;
   color: #050000;
+  font-style: italic;
+  text-align: center;
   text-shadow: 5px 5px 2px #d10000, -5px -5px 2px #ffffff;
 }
 
@@ -64,10 +59,11 @@ button {
   position: absolute;
   background-image:url('CAR.png');
   background-size: contain;
-  width: 95px;
+  width: 91px;
   height: 165px;
   bottom: 10px;
   z-index: 1;
+  border-radius: 20%;
 }
 
 .gameArea {
@@ -98,6 +94,7 @@ button {
 }
 
 .potholes {
+  display: none;
   position: absolute;
   height: 65px;
   width: 65px;
