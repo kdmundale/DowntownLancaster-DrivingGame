@@ -109,7 +109,6 @@ if (player.safe == true) {
     }
 
   let car = document.querySelector(".car");
-    // let container = document.querySelector("#container");
 
     let active = false;
     let currentX;
