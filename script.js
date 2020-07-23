@@ -270,12 +270,12 @@ if (player.safe == true) {
     let elapsed = -(goFast-Date.now());
         if (elapsed > player.delay){
           player.speed++;
-          player.delay-=100;
+          player.delay-=75;
           goFast = Date.now();
           }
   } else {
-    player.speed = 25;
-    player.delay = 1250;
+    player.speed = 20;
+    player.delay = 1400;
   }
 
   let road = gameArea.getBoundingClientRect();
