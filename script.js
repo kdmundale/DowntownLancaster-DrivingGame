@@ -285,7 +285,7 @@ if (player.safe == true) {
           player.y -= player.speed;
         } else if (keys.ArrowDown && player.y < road.bottom){
           player.y += player.speed;
-        } else if (keys.ArrowLeft && player.x > 0) {
+        } else if (keys.ArrowLeft && player.x > -10) {
             player.x -= player.speed;
         } else if (keys.ArrowRight && player.x < (road.width - vehicle.width)){
             player.x += player.speed;

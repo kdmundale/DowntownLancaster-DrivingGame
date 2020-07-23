@@ -38,6 +38,7 @@ h1 {
 p {
   font-variant: small-caps;
   font-style: italic;
+  font-weight: bold;
   margin: 0 40px 20px 40px;
   font-size: calc(30px + 50 * ((100vw - 600px)/1000));
   text-align: center;
