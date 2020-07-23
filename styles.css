@@ -180,13 +180,13 @@ button {
   .house {
     left: -133px;
     width: 130px;
-    height: 200px;
+    height: 120px;
     background-size: auto;
   }
 
   .house2 {
     width: 150px;
-    height: 200px;
+    height: 120px;
     left: 400px;
     background-size: auto;
   }
