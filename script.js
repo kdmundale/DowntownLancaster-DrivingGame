@@ -76,23 +76,23 @@ function movePotholes() {
             let result = document.getElementById("result");
 
               if (miles < 1) {
-                result.innerText = death[0]+ miles + ' miles';
+                result.innerText = death[0]+ miles + ' blocks';
               }
 
               else if (miles == 1) {
-                result.innerText = death[0]+ miles + ' mile';
+                result.innerText = death[0]+ miles + ' block';
               }
 
               else if (1 < miles && miles < 10) {
-                result.innerText = death[1] + miles + ' miles';
+                result.innerText = death[1] + miles + ' blocks';
               }
 
               else if (10 <= miles && miles < 25) {
-                result.innerText = death[2] + miles + ' miles';
+                result.innerText = death[2] + miles + ' blocks';
               }
 
               else {
-                result.innerText = death[3] + miles + ' miles';
+                result.innerText = death[3] + miles + ' blocks';
               }
           }
         });
@@ -127,23 +127,23 @@ function moveHouses() {
             let result = document.getElementById("result");
 
               if (miles < 1) {
-                result.innerText = death[0]+ miles + ' miles';
+                result.innerText = death[0]+ miles + ' blocks';
               }
 
               else if (miles == 1) {
-                result.innerText = death[0]+ miles + ' mile';
+                result.innerText = death[0]+ miles + ' block';
               }
 
               else if (1 < miles && miles < 10) {
-                result.innerText = death[1] + miles + ' miles';
+                result.innerText = death[1] + miles + ' blocks';
               }
 
               else if (10 <= miles && miles < 25) {
-                result.innerText = death[2] + miles + ' miles';
+                result.innerText = death[2] + miles + ' blocks';
               }
 
               else {
-                result.innerText = death[3] + miles + ' miles';
+                result.innerText = death[3] + miles + ' blocks';
               }
           }
         });
@@ -158,23 +158,23 @@ function moveHouses() {
             let result = document.getElementById("result");
 
               if (miles < 1) {
-                result.innerText = death[0]+ miles + ' miles';
+                result.innerText = death[0]+ miles + ' blocks';
               }
 
               else if (miles == 1) {
-                result.innerText = death[0]+ miles + ' mile';
+                result.innerText = death[0]+ miles + ' block';
               }
 
               else if (1 < miles && miles < 10) {
-                result.innerText = death[1] + miles + ' miles';
+                result.innerText = death[1] + miles + ' blocks';
               }
 
               else if (10 <= miles && miles < 25) {
-                result.innerText = death[2] + miles + ' miles';
+                result.innerText = death[2] + miles + ' blocks';
               }
 
               else {
-                result.innerText = death[3] + miles + ' miles';
+                result.innerText = death[3] + miles + ' blocks';
               }
           }
         });
@@ -195,7 +195,7 @@ if (player.safe == true) {
           div.style.left = position[(Math.floor(Math.random()*10))] + "%";
           gameArea.replaceChild(div, old);
           miles++;
-          mileadge.textContent = "MILES DRIVEN: "+ miles ;
+          mileadge.textContent = "BLOCKS DRIVEN: "+ miles ;
           console.log(miles);
       }
     }
