@@ -81,14 +81,14 @@ button {
 .line {
   position: absolute;
   height: 5vh;
-  width: .80vw;
+  width: 5px;
   left: 66%;
   background-color: white;
 }
 .line2 {
   position: absolute;
   height: 5vh;
-  width: .80vw;
+  width: 5px;
   left: 33%;
   background-color: white;
 }
@@ -97,9 +97,8 @@ button {
   position: absolute;
   height: 65px;
   width: 65px;
-  background: radial-gradient(#000101, #4B5555);
-  border: 3px solid #4B5555;
-  border-radius: 50%;
+  background-image: url("pothole.png");
+  background-size: contain;
 }
 
 .trees {
@@ -160,4 +159,33 @@ button {
   padding: 20px;
   font-size: calc(30px + 30 * ((100vw - 600px)/1000));
   font-family: serif;
+}
+
+@media screen and (min-width: 768px){
+
+  .gameArea {
+    width: 400px;
+  }
+
+  .car {
+    border: 1px solid white;
+    width: 120px;
+    height: 220px;
+  }
+
+  .trees {
+    left: -68px;
+    width: 65px;
+    height: 90px;
+  }
+  .trees2 {
+    width: 65px;
+    height: 90px;
+    left: 400px;
+  }
+
+  .potholes {
+    width: 110px;
+    height: 110px;
+  }
 }
