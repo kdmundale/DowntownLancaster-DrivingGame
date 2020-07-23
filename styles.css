@@ -95,7 +95,6 @@ button {
 }
 
 .potholes {
-  display: none;
   position: absolute;
   height: 65px;
   width: 65px;
@@ -103,7 +102,7 @@ button {
   background-size: contain;
 }
 
-.trees {
+.house {
   z-index: 2;
   position: absolute;
   left: -42px;
@@ -113,7 +112,7 @@ button {
   background-size: contain;
 }
 
-.trees2 {
+.house2 {
   z-index: 2;
   position: absolute;
   width:45px;
@@ -178,14 +177,14 @@ button {
     height: 220px;
   }
 
-  .trees {
+  .house {
     left: -133px;
     width: 130px;
     height: 200px;
     background-size: auto;
   }
 
-  .trees2 {
+  .house2 {
     width: 150px;
     height: 200px;
     left: 400px;

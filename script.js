@@ -98,17 +98,17 @@ function movePotholes() {
         });
 }
 
-function moveTrees() {
-    let trees = document.querySelectorAll(".trees");
-    trees.forEach(function (item) {
+function moveHouses() {
+    let houses = document.querySelectorAll(".house");
+    houses.forEach(function (item) {
         if (item.y >= window.innerHeight) {
             item.y -= window.innerHeight;
         }
         item.y += player.speed;
         item.style.top = item.y + "px";
         });
-    let trees2 = document.querySelectorAll(".trees2");
-    trees2.forEach(function (item) {
+    let houses2 = document.querySelectorAll(".house2");
+    houses2.forEach(function (item) {
         if (item.y >= window.innerHeight) {
             item.y -= window.innerHeight;
         }
@@ -116,7 +116,7 @@ function moveTrees() {
         item.style.top = item.y + "px";
         });
     let car = document.querySelector(".car");
-    trees.forEach(function (item) {
+    houses.forEach(function (item) {
          if (isCollide (car, item)) {
             player.safe = false;
             console.log(player.safe);
@@ -147,7 +147,7 @@ function moveTrees() {
               }
           }
         });
-    trees2.forEach(function (item) {
+    houses2.forEach(function (item) {
          if (isCollide (car, item)) {
             player.safe = false;
             console.log(player.safe);
@@ -265,7 +265,7 @@ if (player.safe == true) {
 
   moveLines();
   movePotholes();
-  moveTrees();
+  moveHouses();
   if (player.speed < 25){
     let elapsed = -(goFast-Date.now());
         if (elapsed > player.delay){
@@ -333,14 +333,14 @@ function start(){
       }
       for(let x=0; x<10; x++){
         let div = document.createElement('div');
-        div.classList.add("trees");
+        div.classList.add("house");
         div.y= x*150;
         div.style.top = (x*150) + "px";
         gameArea.appendChild(div);
       }
       for(let x=0; x<10; x++){
         let div = document.createElement('div');
-        div.classList.add("trees2");
+        div.classList.add("house2");
         div.y= x*150;
         div.style.top = (x*150) + "px";
         gameArea.appendChild(div);
